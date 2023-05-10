@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>final exam</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/sharp-sans" rel="stylesheet">       
+</head>
+<header>
+
+
+  <a href="https://www.solita.fi/en/">
+    <img src="img/logo.png" alt="logo">
+  </a>
+</header>
+<body>
+  <p>
+    "We create impact that lasts by combining <br>  tech, data and human insight."
+  </p>
+    <button id="scroll-to-bottom"></button>
+
+    <script>
+        // Get the button element
+        var arrowImage = document.getElementById("scroll-to-bottom");
+
+        // Function to handle button click
+        function handleClick() {
+            // Scroll to the bottom of the page
+            window.scrollTo({
+                top: document.body.scrollHeight,
+            });
+
+            // Remove the "pulse" class
+            arrowImage.classList.remove("pulse");
+
+            // Hide the button
+            arrowImage.style.display = "none";
+
+            // Add a "clicked" class to prevent further pulsating
+            arrowImage.classList.add("clicked");
+        }
+
+        // Handle button click
+        arrowImage.addEventListener("click", handleClick);
+
+        // Handle mouseover to pulsate the button
+        arrowImage.addEventListener("mouseover", function() {
+            if (!arrowImage.classList.contains("clicked")) {
+                arrowImage.classList.add("pulse");
+            }
+        });
+
+        // Handle animation end to remove the "pulse" class
+        arrowImage.addEventListener("animationend", function() {
+            if (!arrowImage.classList.contains("clicked")) {
+                arrowImage.classList.remove("pulse");
+            }
+        });
+    </script>
+</body>
+</html>

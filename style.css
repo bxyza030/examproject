@@ -1,0 +1,68 @@
+body {
+  background-image: url('img/img.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 480vh;
+  position: relative;
+}
+header img {
+  padding-top: 20px;
+  padding-left: 32px;
+  top: 0;
+  max-width: 48px; 
+  max-height: 48px; 
+}
+
+p {
+  color: white;
+  font-family: 'sharp sans', sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  padding-top: 100px;
+  padding-left: 60px;
+}
+#scroll-to-bottom {
+  position: fixed;
+  top: 320px;
+  right: auto;
+  transform: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: white;
+  background: transparent;
+  font-family: 'Sharp Sans', sans-serif;
+  font-weight: bolder;
+  animation: pulse 2s infinite;
+  padding-left: 60px;
+}
+
+
+/* Hide button after click */
+.clicked #scroll-to-bottom {
+  display: none;
+}
+
+#scroll-to-bottom:before {
+  content: "THIS IS HOW";
+  display: block;
+  text-align: center;
+  width: 100%;
+  border: solid white;
+    padding: 10px;
+
+
+}
+
+.pulse {
+  animation: pulse-animation 2s ease-out infinite;
+  transform-origin: center;
+  transform: scaleX(1.2);
+}
